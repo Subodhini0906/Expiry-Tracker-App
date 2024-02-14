@@ -19,4 +19,11 @@
     <string name="original_price">Original Price</string>
     <string name="rs_40">Rs. 40</string>
     <string name="rs_35">Rs. 35</string>
+    <string name="item_name">Item Name</string>
+    <string name="add_this_item">Add this item</string>
+    <string name="price">Price</string>
+    <string name="exp_date">Exp Date</string>
+    <string name="mfg_date_">Mfg Date</string>
+    <string name="_Quantity">Quantity</string>
+    <string name="_item_type">Item type</string>
 </resources>
