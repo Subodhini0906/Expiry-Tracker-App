@@ -19,7 +19,111 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="20dp">
+        <TextView
+            android:id="@+id/helloTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello!"
+            android:textStyle="bold"
+            android:fontFamily="serif-monospace"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="48dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/hand_image_removebg"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/helloTV"
+            app:layout_constraintStart_toEndOf="@id/helloTV"
+            app:layout_constraintTop_toTopOf="@id/helloTV"/>
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/introCV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/dark_default_background"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/helloTV">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="serif-monospace"
+                    android:text="Welcome to the FoodLife Extenders"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/leaf_ver"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/vector_leaf_ver" />
+
+                <ImageView
+                    android:id="@+id/leaf_hor"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/vector_leaf_hor" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/searchCV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="16dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_marginVertical="32dp"
+            android:layout_marginHorizontal="8dp"
+            app:layout_constraintTop_toBottomOf="@id/introCV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:padding="8dp"
+                app:queryHint="Search by title..."
+                app:iconifiedByDefault="false"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginHorizontal="4dp"
+            app:layout_constraintTop_toBottomOf="@id/searchCV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            app:tint="@color/white"
+            android:backgroundTint="@color/dark_default_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
