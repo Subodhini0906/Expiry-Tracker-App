@@ -13,4 +13,8 @@ class AddItemFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_add_item, container, false)
     }
+
+    companion object {
+        fun newInstance() = AddItemFragment()
+    }
 }
