@@ -200,8 +200,12 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
             app:layout_constraintTop_toBottomOf="@+id/itemNameTIL5"
             app:layout_constraintVertical_bias="0.763" />
 
+=======
+            app:layout_constraintTop_toBottomOf="@+id/itemNameTIL5" />
+>>>>>>> 5b3fcc0327f967ebc3a27c72413a4fcef7d97d44
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
